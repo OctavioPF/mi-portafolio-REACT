@@ -5,7 +5,7 @@ function Profile() {
   const [isEditing, setIsEditing] = useState(false);
   const [descripcion, setDescripcion] = useState('apasionado desarrollador web recién egresado de ingenieria en Sistemas Computacionales. Soy un entusiasta del aprendizaje continuo, lo que me permite estar al día con las últimas tendencias y tecnologías en el campo del desarrollo web.');
   const [habilidadesBlandas, setHabilidadesBlandas] = useState('Comunicación, Trabajo en equipo, Creatividad , Aprendizaje Rapido, trabajo bajo presion , Autodidacta , Responsable , Tolerante, Amable , Comunicacion asertiva , Adaptabilidad, Organizado');
-  const [habilidadesTecnicas, setHabilidadesTecnicas] = useState('JavaScript: 75% , PHP: 65% , HTML:80% , CSS:80%,  MYSQL: 70%, React.js: 60%, Vue.js: 60%');
+  const [habilidadesTecnicas, setHabilidadesTecnicas] = useState('JS: 75% , PHP: 65% , HTML:80% , CSS:80%,  MYSQL: 70%, React.js: 60%, Vue.js: 60%');
 
   const user = {
     name: "Jose Octavio Palacio",

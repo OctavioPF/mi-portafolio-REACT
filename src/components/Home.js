@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Home.css';
 
 const Home = () => {
-    const [showMore, setShowMore] = useState(false);
+    const [setShowMore] = useState(false);
 
     const handleConoceMasClick = () => {
         setShowMore(true);
