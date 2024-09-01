@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom'; // Asegúrate de importar Link
 import './Home.css';
 
 const Home = () => {
@@ -22,26 +23,26 @@ const Home = () => {
             </section>
             <section ref={sectionRef} className="navigation">
                 <div className="navigation-content">
-                    <h1>Que deseas mirar primero</h1>
+                    <h1>Qué deseas mirar primero</h1>
                     <p>Puedes dar click en alguna de estas opciones</p>
                     <div className="tooltip-container">
-                        <a href="/sobre-mi" className="btn-nav">Sobre Mí</a>
-                        <span className="tooltip">Aquí podrás encontrar información relevante sobre mí, quien soy y las habilidades técnicas y blandas que tengo.</span>
+                        <Link to="/sobre-mi" className="btn-nav">Sobre Mí</Link>
+                        <span className="tooltip">Aquí podrás encontrar información relevante sobre mí, quién soy y las habilidades técnicas y blandas que tengo.</span>
                     </div>
                     <div className="tooltip-container">
-                        <a href="/proyectos" className="btn-nav">Proyectos</a>
+                        <Link to="/proyectos" className="btn-nav">Proyectos</Link>
                         <span className="tooltip">Explora los proyectos en los que he trabajado y descubre más sobre mis contribuciones.</span>
                     </div>
                     <div className="tooltip-container">
-                        <a href="/cursos" className="btn-nav">Cursos</a>
+                        <Link to="/cursos" className="btn-nav">Cursos</Link>
                         <span className="tooltip">Listado de cursos y certificaciones que he completado para mejorar mis habilidades.</span>
                     </div>
                     <div className="tooltip-container">
-                        <a href="/blog" className="btn-nav">Blog</a>
+                        <Link to="/blog" className="btn-nav">Blog</Link>
                         <span className="tooltip">Lee los artículos más recientes y publicaciones sobre temas de interés.</span>
                     </div>
                     <div className="tooltip-container">
-                        <a href="/contacto" className="btn-nav">Contacto</a>
+                        <Link to="/contacto" className="btn-nav">Contacto</Link>
                         <span className="tooltip">Información para contactarme, ya sea por correo electrónico o redes sociales.</span>
                     </div>
                 </div>
