@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
+  Route, Routes, Navigate
 } from "react-router-dom";
 import Login from "./components/Login";
 import SplashScreen from "./components/SplashScreen";
@@ -16,6 +14,7 @@ import Contacto from "./components/Contacto";
 import Header from "./components/Header";
 import ProjectPage from "./components/ModalProyecto";
 import PostDetail from "./components/PostDetail";
+import ScrollToTop from "./components/ScrollToTop"; // Importa el nuevo componente
 import "./App.css";
 
 function App() {
@@ -25,16 +24,17 @@ function App() {
     // Simula la duración del SplashScreen y luego redirige a Home
     const timer = setTimeout(() => {
       setSplashDone(true);
-    }, 6000); // 3 segundos
+    }, 6000); // 6 segundos
 
     return () => clearTimeout(timer); // Limpiar el temporizador si el componente se desmonta antes de que termine
   }, []);
 
   return (
     <Router>
+      <ScrollToTop /> {/* Añade el componente ScrollToTop aquí */}
       <Routes>
         {!splashDone ? (
-          <Route path="/" element={<SplashScreen />} />
+          <Route exact path="/" element={<SplashScreen />} />
         ) : (
           <>
             <Route
@@ -90,7 +90,7 @@ function App() {
                   <Contacto />
                 </>
               }
-            />{" "}
+            />
             <Route
               path="/login"
               element={
@@ -112,7 +112,6 @@ function App() {
             />
             <Route path="*" element={<Navigate to="/home" />} />
           </>
-          
         )}
       </Routes>
     </Router>

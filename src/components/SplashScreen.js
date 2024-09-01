@@ -15,7 +15,7 @@ function SplashScreen() {
         <div className="splash-screen">
             <div className="content">
                 <h1>Bienvenido a mi portafolio web</h1>
-                <p>Eres bienvenido cualquier pregunta no dudes en contactarme</p>
+                <p>Eres bienvenid@ cualquier pregunta no dudes en contactarme</p>
             </div>
             <div className="background"></div>
         </div>

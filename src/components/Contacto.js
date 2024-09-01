@@ -10,17 +10,17 @@ const Contacto = () => {
                 <div className="contacto-item">
                     <FaEnvelope className="contacto-icon" />
                     <h2>Correo Electrónico</h2>
-                    <p><a href="mailto:example@example.com">example@example.com</a></p>
+                    <p><a href="octaviop0809@gmail.com">octaviop0809@gmail.com</a></p>
                 </div>
                 <div className="contacto-item">
                     <FaPhone className="contacto-icon" />
                     <h2>Teléfono</h2>
-                    <p><a href="tel:+1234567890">+123 456 7890</a></p>
+                    <p><a href="tel:+52 7861704152">+52 786 170 4152</a></p>
                 </div>
                 <div className="contacto-item">
                     <FaLinkedin className="contacto-icon" />
                     <h2>LinkedIn</h2>
-                    <p><a href="https://www.linkedin.com/in/example" target="_blank" rel="noopener noreferrer">linkedin.com/in/example</a></p>
+                    <p><a href="https://www.linkedin.com/in/octavio-palacio-5b93b3295/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/octavio-palacio-5b93b3295/</a></p>
                 </div>
                 <div className="edit-section">
                     <FaEdit className="edit-icon" />

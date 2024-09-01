@@ -181,7 +181,9 @@ h2 {
     animation: fadeIn 1s ease-in-out;
 
 }
-
+button.slick-arrow.slick-next , button.slick-arrow.slick-prev  {
+    color: transparent;
+}
 /* Modal */
 .modal {
     position: fixed;
@@ -288,6 +290,14 @@ h2 {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+    }
+    .slick-prev {
+        left: 0px;
+        z-index: 9;
+    }
+    .slick-next {
+        right: 0px;
+        z-index: 9;
     }
 }
 .btn-add,.btn-edit,.btn-delete {
