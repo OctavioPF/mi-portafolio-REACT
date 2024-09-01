@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Home.css';
 
 const Home = () => {
-    const [setShowMore] = useState(false);
-
     const handleConoceMasClick = () => {
-        setShowMore(true);
-        // Esto moverá la vista hasta el final del contenido actual de la página
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     };
 
@@ -22,8 +18,8 @@ const Home = () => {
             <div>
                 <nav className="navigation">
                     <div className="navigation-content">
-                        <h1>¿Qué deseas mirar primero?</h1>
-                        <p>Puedes dar clic en alguna de estas opciones</p>
+                        <h1>Que deseas mirar primero</h1>
+                        <p>Puedes dar click en alguna de estas opciones</p>
                         <div className="tooltip-container">
                             <a href="/sobre-mi" className="btn-nav">Sobre Mí</a>
                             <span className="tooltip">Aquí podrás encontrar información relevante sobre mí, quien soy y las habilidades técnicas y blandas que tengo.</span>
