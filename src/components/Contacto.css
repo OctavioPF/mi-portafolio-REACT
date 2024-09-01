@@ -1,0 +1,107 @@
+.contacto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ff4081, #ff8a00);
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.contacto-item,
+.edit-section {
+    background: #fff;
+    color: #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-item:hover,
+.edit-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contacto-icon {
+    font-size: 2rem;
+    color: #ff4081;
+}
+
+.edit-section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 2;
+    background: #fff;
+    color: #333;
+}
+
+.edit-icon {
+    font-size: 2rem;
+    color: #ff4081;
+}
+
+.edit-button {
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #ff8a00;
+}
+
+.contacto-footer {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: center;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .contacto-grid {
+        display: flex;
+        grid-template-columns: auto;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    
+    .contacto-item,
+    .edit-section {
+        padding: 1rem; /* Reducir el padding para pantallas pequeñas */
+    }
+    
+    .contacto-icon {
+        font-size: 1.5rem; /* Reducir el tamaño de los íconos */
+    }
+
+    .edit-button {
+        padding: 0.5rem 1rem; /* Ajustar el padding del botón para pantallas pequeñas */
+        font-size: 0.9rem; /* Reducir el tamaño de la fuente del botón */
+    }
+
+    .contacto-footer {
+        font-size: 0.8rem; /* Reducir el tamaño de la fuente en el pie de página */
+    }
+}

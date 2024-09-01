@@ -1,0 +1,120 @@
+.cursos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #ff4081, #ff8a00);
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;    
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.search-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: 1px solid #ff8a00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border: 1px solid #fff;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.curso-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.curso-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.curso-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #ff8a00;
+    transition: transform 0.3s ease;
+}
+
+.curso-card:hover .curso-img {
+    transform: scale(1.1);
+}
+
+.curso-info {
+    padding: 20px;
+    background: #fff;
+}
+
+.curso-info h3 {
+    margin: 0 0 10px;
+    font-size: 1.75rem;
+    color: #ff4081;
+}
+
+.curso-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #777;
+}
+
+.curso-hover {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    transition: top 0.3s ease;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.curso-card:hover .curso-hover {
+    top: 0;
+}
+
+.curso-hover p {
+    margin: 0;
+    font-size: 1.2rem;
+}

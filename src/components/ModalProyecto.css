@@ -1,0 +1,96 @@
+/* Estilos para el modal */
+.customModal {
+    background-color: #ffffff;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 8px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeIn 0.5s forwards;
+}
+
+.customOverlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalContent {
+    text-align: center;
+}
+
+.projectImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.projectTitle {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.projectDescription {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.modalActions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectButton, .closeButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.projectButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.projectButton:hover {
+    background-color: #45a049;
+}
+
+.closeButton {
+    background-color: #f44336;
+    color: white;
+}
+
+.closeButton:hover {
+    background-color: #d32f2f;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}

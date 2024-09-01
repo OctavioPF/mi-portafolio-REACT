@@ -1,0 +1,100 @@
+/* Estilos generales para el contenedor del blog */
+.blog-container {
+    padding: 2rem;
+    background: linear-gradient(135deg, #ff4081, #ff8a00);
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+    text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+/* Estilos para el título del blog */
+.blog-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #fff; /* Puedes cambiar el color si lo deseas */
+}
+
+/* Contenedor para los posts del blog */
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+/* Estilos para cada tarjeta del blog */
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.blog-card img:hover {
+    opacity: 0.8;
+}
+
+.blog-card h3 {
+    font-size: 1.25rem;
+    margin: 1rem;
+    color: #333;
+}
+
+.blog-card .blog-date {
+    font-size: 0.875rem;
+    color: #666;
+    margin: 0 1rem;
+}
+
+.blog-card p {
+    font-size: 1rem;
+    margin: 0 1rem 1rem;
+    color: #444;
+}
+
+/* Estilos para el botón de agregar nuevo post */
+.add-post {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.add-post button {
+    display: none;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-post button:hover {
+    background-color: #e03c7a;
+}
+
+/* Animación para el contenedor del blog */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

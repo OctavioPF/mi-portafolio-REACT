@@ -1,0 +1,315 @@
+/* Proyectos.css */
+
+.proyectos {
+    background: linear-gradient(135deg, #ff4081, #ff8a00);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+.proyectos-form {
+    margin-bottom: 2rem;
+}
+img {
+    width: 250px;
+    height: 175px;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    animation: slideInDown 1s ease;
+    text-align: center;
+}
+.proyectos-form input,
+.proyectos-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    animation: fadeIn 1s ease-in-out;
+
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.proyectos-form input:focus,
+.proyectos-form textarea:focus {
+    border-color: #ff8a00;
+    box-shadow: 0 0 8px rgba(255, 138, 0, 0.3);
+}
+
+.proyectos-form button {
+    padding: 0.8rem 1.5rem;
+    background-color: #04b500;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.proyectos-form button:hover {
+    background-color: #028a00;
+    transform: scale(1.05);
+}
+
+/* Carrusel y elementos */
+.carousel-container {
+    position: relative;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.carousel-slide:hover {
+    transform: scale(1.05);
+}
+
+.carousel-slide img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+}
+
+.carousel-slide img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-title {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.carousel-slide:hover .carousel-title {
+    color: #ff4081;
+}
+
+.carousel-date {
+    font-size: 14px;
+    color: #666;
+    transition: color 0.3s ease-in-out;
+}
+
+.carousel-slide:hover .carousel-date {
+    color: #ff8a00;
+}
+
+/* Puntos del carrusel */
+.slick-dots {
+    bottom: -50px;
+
+}
+.slick-initialized .slick-slide {
+    display: flex;
+    cursor: pointer;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-dots li button:before {
+     font-size: 12px;
+    opacity: 0.8;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.slick-dots li.slick-active button:before {
+    transform: scale(1.2);
+    color: white;
+}
+
+/* Flechas del carrusel */
+.slick-prev,
+.slick-next {
+    font-size: 24px;
+    color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    opacity: 1;
+}
+.proyectos-actions {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.slick-prev {
+    left: 10px;
+    z-index: 9;
+
+}
+
+.slick-next {
+    right: 35px;
+}
+
+.slick-slider {
+    margin: 12% auto !important;
+    animation: fadeIn 1s ease-in-out;
+
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: slideInUp 0.4s ease-in-out;
+}
+
+.modal-content input,
+.modal-content textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+    border-color: #ff8a00;
+    box-shadow: 0 0 8px rgba(255, 138, 0, 0.3);
+}
+
+.modal-content button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.modal-content button:first-of-type {
+    background-color: #04b500;
+    color: #fff;
+}
+
+.modal-content button:nth-of-type(2) {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.modal-content button:last-of-type {
+    background-color: #9e9e9e;
+    color: #fff;
+}
+
+.modal-content button:hover {
+    transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .carousel-container {
+        padding: 10px;
+    }
+
+    .carousel-title {
+        font-size: 16px;
+    }
+
+    .carousel-date {
+        font-size: 12px;
+    }
+
+    .slick-prev,
+    .slick-next {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .proyectos-actions {
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+.btn-add,.btn-edit,.btn-delete {
+    background-color: #0072ff;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: none;
+}
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+
+    .proyectos-actions {
+        margin-top: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
