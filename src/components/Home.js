@@ -19,15 +19,6 @@ const Home = () => {
                     <button onClick={handleConoceMasClick} className="btn-primary">Conoce Más</button>
                 </div>
             </section>
-
-            {/* Aquí puedes mostrar contenido adicional basado en el estado showMore */}
-            {showMore && (
-                <div className="additional-content">
-                    <p>Aquí hay más información sobre mí y mi trabajo...</p>
-                    {/* Puedes agregar más contenido, secciones, etc. */}
-                </div>
-            )}
-
             <div>
                 <nav className="navigation">
                     <div className="navigation-content">
