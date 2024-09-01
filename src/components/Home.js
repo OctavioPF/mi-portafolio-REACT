@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Importa Link
 import './Home.css';
 
 const Home = () => {
-    const [setShowMore] = useState(false);
+    const [showMore, setShowMore] = useState(false);
 
     const handleConoceMasClick = () => {
         setShowMore(true);
+        // Esto moverá la vista hasta el final del contenido actual de la página
         window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     };
 
@@ -19,29 +19,38 @@ const Home = () => {
                     <button onClick={handleConoceMasClick} className="btn-primary">Conoce Más</button>
                 </div>
             </section>
+
+            {/* Aquí puedes mostrar contenido adicional basado en el estado showMore */}
+            {showMore && (
+                <div className="additional-content">
+                    <p>Aquí hay más información sobre mí y mi trabajo...</p>
+                    {/* Puedes agregar más contenido, secciones, etc. */}
+                </div>
+            )}
+
             <div>
                 <nav className="navigation">
                     <div className="navigation-content">
                         <h1>¿Qué deseas mirar primero?</h1>
                         <p>Puedes dar clic en alguna de estas opciones</p>
                         <div className="tooltip-container">
-                            <Link to="/sobre-mi" className="btn-nav">Sobre Mí</Link>
+                            <a href="/sobre-mi" className="btn-nav">Sobre Mí</a>
                             <span className="tooltip">Aquí podrás encontrar información relevante sobre mí, quien soy y las habilidades técnicas y blandas que tengo.</span>
                         </div>
                         <div className="tooltip-container">
-                            <Link to="/proyectos" className="btn-nav">Proyectos</Link>
+                            <a href="/proyectos" className="btn-nav">Proyectos</a>
                             <span className="tooltip">Explora los proyectos en los que he trabajado y descubre más sobre mis contribuciones.</span>
                         </div>
                         <div className="tooltip-container">
-                            <Link to="/cursos" className="btn-nav">Cursos</Link>
+                            <a href="/cursos" className="btn-nav">Cursos</a>
                             <span className="tooltip">Listado de cursos y certificaciones que he completado para mejorar mis habilidades.</span>
                         </div>
                         <div className="tooltip-container">
-                            <Link to="/blog" className="btn-nav">Blog</Link>
+                            <a href="/blog" className="btn-nav">Blog</a>
                             <span className="tooltip">Lee los artículos más recientes y publicaciones sobre temas de interés.</span>
                         </div>
                         <div className="tooltip-container">
-                            <Link to="/contacto" className="btn-nav">Contacto</Link>
+                            <a href="/contacto" className="btn-nav">Contacto</a>
                             <span className="tooltip">Información para contactarme, ya sea por correo electrónico o redes sociales.</span>
                         </div>
                     </div>
