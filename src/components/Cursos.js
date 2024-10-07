@@ -3,6 +3,27 @@ import "./Cursos.css";
 
 const cursos = [
     {
+        id: 13,
+        nombre: 'Vue.js: Navegacion con vue router',
+        fecha: 'Octubre 2024',
+        descripcionGrande: 'Este curso me ayudo a comprender mas a profundidad el uso vue router',
+        img: '/assets/curso13.png'
+    },
+    {
+        id: 12,
+        nombre: 'Animaciones con CSS',
+        fecha: 'Octubre 2024',
+        descripcionGrande: 'Este curso práctico reforzó mis habilidadespara el uso de animaciones en css',
+        img: '/assets/curso12.png'
+    },
+    {
+        id: 11,
+        nombre: 'FastAPI',
+        fecha: 'Septiembre 2024',
+        descripcionGrande: 'Este curso es una alternativa moderna para la realizacion de una API con el uso de un Framework de Python',
+        img: '/assets/curso11.png'
+    },
+    {
         id: 1,
         nombre: 'Curso de Vue.js: Componentes y Compisition API',
         fecha: 'Julio 2024',
