@@ -13,7 +13,13 @@
     to { opacity: 1; }
 }
 
+::placeholder{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-shadow: 0px 0px 2px white;
+}
 .search-input {
+    background-color: #1b5bc8;
     width: 100%;
     max-width: 600px;
     padding: 10px;
@@ -57,7 +63,7 @@
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #fff;
+    background: #1b5bc8;
 }
 
 .curso-card:hover {
@@ -79,21 +85,24 @@
 
 .curso-info {
     padding: 20px;
-    background: #fff;
+    background: #1b5bc8;
 }
 
 .curso-info h3 {
     margin: 0 0 10px;
     font-size: 1.75rem;
-    color: #ff4081;
+    color: black;
 }
 
 .curso-info p {
     margin: 5px 0;
     font-size: 1rem;
-    color: #777;
+    color: rgb(56, 56, 56);
 }
-
+.decripcionCursosText{
+    color: #1b5bc8;
+    text-shadow: 0px 0px 5px #6c6c6c;
+}
 .curso-hover {
     position: absolute;
     top: 100%;

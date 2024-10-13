@@ -13,15 +13,23 @@
 .proyectos-form {
     margin-bottom: 2rem;
 }
-img {
+.imgProyectos {
     width: 250px;
     height: 175px;
+    Box-shadow: 0 0 8px #ededed;
+
 }
+
+::before {
+    color: #1f56b6 !important;
+}
+
 h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #333;
-    animation: slideInDown 1s ease;
+    color: #1f56b6;
+    text-shadow: 0 0 5px #ffffff;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 2s ease-in-out;
     text-align: center;
 }
 .proyectos-form input,

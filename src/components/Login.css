@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    background: linear-gradient(45deg, #1f56b6, #0072ff);
     font-family: 'Roboto', sans-serif;
     animation: fadeIn 1s ease-in-out;
 
@@ -31,15 +31,19 @@
 .input-group input {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid #1f56b6;
     border-radius: 5px;
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s ease;
+    background-color: transparent;
 }
 
 .input-group input:focus {
     border-color: #0072ff;
+    color: #1f56b6;
+    font-weight: bold;
+    background-color: transparent;
 }
 
 button {
@@ -55,4 +59,8 @@ button {
 
 button:hover {
     background-color: #005bb5;
+}
+
+::placeholder{
+    color: #005bb5;
 }

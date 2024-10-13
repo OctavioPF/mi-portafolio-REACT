@@ -4,6 +4,30 @@
     color: #333;
     overflow-x: hidden;
     position: relative;
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la pantalla */
+}
+
+/* Overlay para el efecto de transición */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 139, 0); /* Transparente inicialmente */
+    transform: scale(0);
+    transform-origin: center;
+    transition: transform 1s ease-in-out, background-color 1s ease-in-out;
+    z-index: 999; /* Por encima de otros elementos */
+    pointer-events: none; /* Permite interacción cuando no está activo */
+}
+
+.overlay.active {
+    box-shadow: 0px 4px 15px #1f56b6, /* sombra base */
+    0px 4px 30px #1f56b6; /* degradado hacia transparente */
+    transform: scale(1);
+    background-color: #1f56b6; /* Azul oscuro */
+    pointer-events: all; /* Bloquea interacciones cuando está activo */
 }
 
 /* Estilos del hero */
@@ -21,12 +45,13 @@
 
 .hero-content {
     z-index: 1;
+    position: relative;
 }
 
+/* Botón principal */
 .btn-primary {
     animation: fadeIn 1s ease-in-out;    
-
-    background-color: #a040ff;
+    background-color: #1f56b6;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -35,15 +60,12 @@
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-
 }
 
 .btn-primary:hover {
     background-color: black;
     color: white;
     transition: width 0.5s ease, background-color 1s ease-in-out;
-
-
 }
 
 /* Sección de navegación */
@@ -56,14 +78,15 @@
 .navigation-content {
     text-align: center;
     margin-top: 20%;
-
+    position: relative;
+    z-index: 1;
 }
 
 .btn-nav {
     display: inline-block;
     padding: 10px 20px;
     margin: 10px;
-    background-color: #a040ff;
+    background-color: #1f56b6;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -74,20 +97,17 @@
 .btn-nav:hover {
     background-color: black;
     transition: width 0.5s ease, background-color 1s ease-in-out;
-
 }
 
 /* Tooltips */
 .tooltip-container {
     margin-top: 12%;
-
     position: relative;
     display: inline-block;
 }
 
 .tooltip-container .tooltip {
     animation: fadeIn 1s ease-in-out;
-
     visibility: hidden;
     background-color: #333;
     color: #fff;
@@ -95,7 +115,7 @@
     border-radius: 5px;
     padding: 5px;
     position: absolute;
-    z-index: 1;
+    z-index: 2; /* Asegura que esté por encima de otros elementos */
     bottom: 125%; /* Coloca el tooltip arriba del enlace */
     left: 50%;
     transform: translateX(-50%);
@@ -173,4 +193,47 @@
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Imagen en estado normal */
+.img-Home {
+    width: 60%;
+    height: auto;
+    animation: fadeIn 2s ease-in-out 1s;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    z-index: 1000; /* Por encima del overlay */
+    position: relative;
+}
+
+/* Agrandamiento de la imagen */
+.img-Home.grow {
+    transform: scale(5); /* Aumenta de tamaño */
+    opacity: 0; /* Desvanece la imagen al agrandarse */
+}
+
+/* Asegurarse de que la transición de la página sea fluida */
+.hero-content, .navigation-content {
+    transition: opacity 1s ease-in-out;
+}
+
+/* Ocultar contenido cuando el overlay está activo */
+.overlay.active ~ .hero .hero-content,
+.overlay.active ~ .navigation .navigation-content {
+    opacity: 0;
+}
+
+
+/* Fondo circular que aparece y desaparece */
+.circ-transition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: linear-gradient(52deg, #ff4081, #ff8a00); /* Colores de navigation */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: width 2s ease-in-out, height 2s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0; /* Comienza invisible */
 }

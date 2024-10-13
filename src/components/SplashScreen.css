@@ -19,6 +19,8 @@
 }
 
 h1 {
+    color: #1f56b6;
+    text-shadow: 0 0 5px #ffffff;
     font-size: 4rem;
     margin-bottom: 1rem;
     animation: fadeIn 2s ease-in-out;

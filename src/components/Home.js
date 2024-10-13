@@ -1,26 +1,49 @@
-import React, { useRef } from 'react';
-import { Link } from 'react-router-dom'; // Asegúrate de importar Link
+import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
-    // Crear una referencia para el elemento al que quieres desplazarte
     const sectionRef = useRef(null);
+    const [isAnimating, setIsAnimating] = useState(false);
 
     const handleConoceMasClick = () => {
-        if (sectionRef.current) {
-            sectionRef.current.scrollIntoView({ behavior: 'smooth' });
-        }
+        setIsAnimating(true);
+
+        // Duración de la animación (en milisegundos)
+        const animationDuration = 1000; // 1 segundo
+
+        // Espera a que la animación termine antes de desplazarse
+        setTimeout(() => {
+            if (sectionRef.current) {
+                sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+            }
+            // Reinicia el estado de animación después de la transición
+            setTimeout(() => {
+                setIsAnimating(false);
+            }, animationDuration);
+        }, animationDuration);
     };
 
     return (
         <div className="home-container">
+            {/* Overlay para el efecto de transición */}
+            <div className={`overlay ${isAnimating ? 'active' : ''}`}></div>
+
             <section className="hero">
                 <div className="hero-content">
+                    <img 
+                        className={`img-Home ${isAnimating ? 'grow' : ''}`} 
+                        src='/assets/desarrollo-web.png' 
+                        alt='desarrollo-web' 
+                    />
                     <h1>Bienvenido a mi Portafolio</h1>
                     <p>Explora mis proyectos, habilidades y mucho más.</p>
-                    <button onClick={handleConoceMasClick} className="btn-primary">Conoce Más</button>
+                    <button onClick={handleConoceMasClick} className="btn-primary">
+                        Conoce Más
+                    </button>
                 </div>
             </section>
+
             <section ref={sectionRef} className="navigation">
                 <div className="navigation-content">
                     <h1>Qué deseas mirar primero</h1>

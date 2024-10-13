@@ -146,7 +146,7 @@ const Proyectos = () => {
             <Slider {...carouselSettings}>
                 {proyectos.map((proyecto, index) => (
                     <div key={index} onClick={() => handleOpenModal(proyecto)}>
-                        <img src={proyecto.img} alt={proyecto.title} />
+                        <img src={proyecto.img} alt={proyecto.title} className='imgProyectos'/>
                         <h3>{proyecto.title}</h3>
                     </div>
                 ))}

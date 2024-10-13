@@ -131,7 +131,7 @@ const Cursos = () => {
                             <p>{curso.fecha}</p>
                         </div>
                         <div className="curso-hover">
-                            <p>{curso.descripcionGrande}</p>
+                            <p className='decripcionCursosText'>{curso.descripcionGrande}</p>
                         </div>
                     </div>
                 ))}

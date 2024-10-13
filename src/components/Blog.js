@@ -22,7 +22,7 @@ export const blogPosts = [
     },
     {
         id: 3,
-        title: 'Cómo optimizar el rendimiento de tu aplicación React',
+        title: ' optimizar el rendimiento de tu aplicación React',
         date: '2024-09-10',
         description: 'Consejos para mejorar la velocidad y eficiencia de tus aplicaciones React.',
         content: 'La optimización del rendimiento es crucial para una buena experiencia de usuario. En este post, te mostraremos algunas técnicas para optimizar el rendimiento de tus aplicaciones React, desde la carga diferida hasta la memoización.',

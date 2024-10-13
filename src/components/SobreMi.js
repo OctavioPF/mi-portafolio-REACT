@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./SobreMi.css";
+import { Link } from 'react-router-dom';
 
 function Profile() {
   const [isEditing, setIsEditing] = useState(false);
-  const [descripcion, setDescripcion] = useState('apasionado desarrollador web recién egresado de ingenieria en Sistemas Computacionales. Soy un entusiasta del aprendizaje continuo, lo que me permite estar al día con las últimas tendencias y tecnologías en el campo del desarrollo web.');
-  const [habilidadesBlandas, setHabilidadesBlandas] = useState('Comunicación, Trabajo en equipo, Creatividad , Aprendizaje Rapido, trabajo bajo presion , Autodidacta , Responsable , Tolerante, Amable , Comunicacion asertiva , Adaptabilidad, Organizado');
+  const [descripcion, setDescripcion] = useState('Hola, Bienvenido a mi perfil soy un desarrollador web egresado de ingenieria en Sistemas Computacionales con una especialidad en desarrollo de software. Soy un entusiasta del aprendizaje continuo, lo que me permite estar al día con las últimas tendencias y tecnologías en el campo del desarrollo web. Me gusta retarme a mi mismo en diferentes proyectos personales desarrollados lo que me ha permitido poner en practica todos mis conocimientos y poner a prueba mi resolucion de errores que surgen en el desarrollo logrando superarme profesionalemente, Estoy en busca de nuevos retos en un ambito mas profesional, por lo cual no dudes en contactarme si te intereso mi perfil.');
+  const [habilidadesBlandas, setHabilidadesBlandas] = useState('Comunicación, Trabajo en equipo, Resolucion de conflicto, Creatividad , Aprendizaje Rapido, trabajo bajo presion , Autodidacta , Responsable , Tolerante, Amable , Comunicacion asertiva , Adaptabilidad, Organizado');
   const [habilidadesTecnicas, setHabilidadesTecnicas] = useState('JS: 75% , PHP: 65% , HTML:80% , CSS:80%,  MYSQL: 70%, React.js: 60%, Vue.js: 60%');
 
   const user = {
@@ -46,32 +47,25 @@ function Profile() {
             </li>
           ))}
         </ul>
-        <button className="edit-btn" onClick={handleEdit}>
-          {isEditing ? 'Guardar' : 'Editar'}
-        </button>
-        {isEditing && (
-          <div className="edit-section">
-            <textarea 
-              placeholder="Descripción"
-              value={descripcion}
-              onChange={(e) => setDescripcion(e.target.value)}
-            />
-            <input 
-              type="text" 
-              placeholder="Habilidades Blandas"
-              value={habilidadesBlandas}
-              onChange={(e) => setHabilidadesBlandas(e.target.value)}
-            />
-            <input 
-              type="text" 
-              placeholder="Habilidades Técnicas"
-              value={habilidadesTecnicas}
-              onChange={(e) => setHabilidadesTecnicas(e.target.value)}
-            />
-            <button onClick={handleSave}>Guardar</button>
-          </div>
-        )}
+
       </div>
+      <div className="navigation-content">
+                    <h1>Ver más</h1>
+                    <p>Puedes mirar otras secciones dando click </p>
+                    <div className="tooltip-container">
+                        <Link to="/proyectos" className="btn-nav">Proyectos</Link>
+                        <span className="tooltip">Explora los proyectos en los que he trabajado y descubre más sobre mis contribuciones.</span>
+                    </div>
+                    <div className="tooltip-container">
+                        <Link to="/cursos" className="btn-nav">Cursos</Link>
+                        <span className="tooltip">Listado de cursos y certificaciones que he completado para mejorar mis habilidades.</span>
+                    </div>
+                    <div className="tooltip-container">
+                        <Link to="/contacto" className="btn-nav">Contacto</Link>
+                        <span className="tooltip">Información para contactarme, ya sea por correo electrónico o redes sociales.</span>
+                    </div>
+                </div>
+      
     </div>
   );
 }
